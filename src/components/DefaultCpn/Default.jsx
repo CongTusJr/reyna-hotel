@@ -3,13 +3,13 @@ import Header from '../HeaderCpn/Header';
 import Footer from '../FooterCpn/Footer';
 
 const Default = ({ children }) => {
-  return (
-    <div>
-      <Header/>
-      {children}
-      <Footer />
-    </div>
-  );
-}
+    return (
+        <div>
+            <Header />
+            <div style={{ marginTop: '20px' }}>{children}</div>
+            <Footer />
+        </div>
+    );
+};
 
 export default Default;

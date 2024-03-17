@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../../components/Card/Card';
 
-const RoomPage = () => {
+const BookedRoom = () => {
     const [apis, setApi] = useState([]);
 
     useEffect(() => {
@@ -36,4 +36,4 @@ const RoomPage = () => {
     );
 };
 
-export default RoomPage;
+export default BookedRoom;
