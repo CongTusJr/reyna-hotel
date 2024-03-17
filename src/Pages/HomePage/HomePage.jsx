@@ -1,21 +1,28 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
 import Form from 'react-bootstrap/Form';
-import DatePicker from 'react-datepicker';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import 'react-datepicker/dist/react-datepicker.css';
 import Button from 'react-bootstrap/Button';
+import { DatePicker, Space } from 'antd';
+
 
 const HomePage = () => {
     
-    const [selectedDateIn, setSelectedDateIn] = useState(null);
-    const [selectedDateOut, setSelectedDateOut] = useState(null);
-    const handleChangeIn = (date) => {
-        setSelectedDateIn(date);
-    };const handleChangeOut = (date) => {
-        setSelectedDateOut(date);
+    // const [selectedDateIn, setSelectedDateIn] = useState(null);
+    // const [selectedDateOut, setSelectedDateOut] = useState(null);
+    const onChangeIn = (date, dateString) => {
+        console.log(date, dateString);
+      };
+    const onChangeOut = (date, dateString) => {
+        console.log(date, dateString);
     };
+    // const handleChangeIn = (date) => {
+    //     setSelectedDateIn(date);
+    // };const handleChangeOut = (date) => {
+    //     setSelectedDateOut(date);
+    // };
     const sliders = [
         'https://khachsan3.migoda.vn/wp-content/uploads/2019/11/CortonaInn-AboutUs-Hero-5bf5845edceef.jpg',
         'https://khachsan3.migoda.vn/wp-content/uploads/2019/11/slider-2.jpg',
@@ -65,22 +72,21 @@ const HomePage = () => {
                     </Form.Select>
                 </div>
                 <div className='justify-center px-[15px] bg-goldlg '>
-                    <DatePicker
-                        selected={selectedDateIn}
-                        onChange={handleChangeIn}
-                        dateFormat="dd/MM/yyyy" // Định dạng ngày tháng
-                        placeholderText="Ngày đến"
-                        className='text-center h-10 w-[224px] mt-[25px]'
-                    />
+                    <Space direction="vertical" >
+                        <DatePicker onChange={onChangeIn} className='text-center h-10 w-[224px] mt-[25px]' />
+                    </Space>
                 </div>
                 <div className='justify-center px-[15px] bg-goldlg '>
-                    <DatePicker
+                    <Space direction="vertical" >
+                        <DatePicker onChange={onChangeOut} className='text-center h-10 w-[224px] mt-[25px]'/>
+                    </Space>{
+                    /* <DatePicker
                         selected={selectedDateOut}
                         onChange={handleChangeOut}
                         dateFormat="dd/MM/yyyy" // Định dạng ngày tháng
                         placeholderText="Ngày đi"
                         className='text-center h-10 w-[224px] mt-[25px]'
-                    />
+                    /> */}
                 </div>
                 <div className='justify-center px-[15px] bg-goldlg'>
                     <Form.Select aria-label="Default select example" className='text-center h-10 w-[224px] mt-[25px]' >
