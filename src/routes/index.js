@@ -6,6 +6,8 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import HomePage from "../Pages/HomePage/HomePage";
 import RoomPage from "../Pages/RoomPage/RoomPage";
 import NavbarAdmin from "../components/NavbarAdmin/NavbarAdmin";
+import DanhSachPhong from "../Pages/Admin/DanhSachPhong";
+import DanhSachDatPhong from "../Pages/Admin/DanhSachDatPhong";
 
 export const routes = [
   {
@@ -47,6 +49,17 @@ export const routes1 = [
   {
     path: "/admin/quan-ly-khach-hang",
     page: QLKH,
+    isShowHeader: true,
+  },
+
+  {
+    path: "/admin/danh-sach-phong",
+    page: DanhSachPhong,
+    isShowHeader: true,
+  },
+  {
+    path: "/admin/danh-sach-dat-phong",
+    page: DanhSachDatPhong,
     isShowHeader: true,
   },
 ];

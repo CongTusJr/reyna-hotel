@@ -10,8 +10,12 @@ const Links = [
         link: '/admin/quan-ly-nhan-vien'
     },
     {
-        name: 'Quản lý phòng',
-        link: '/admin/quan-ly-phong'
+        name: 'Danh sách phòng',
+        link: '/admin/danh-sach-phong'
+    },
+    {
+        name: 'Danh sách đặt phòng',
+        link: '/admin/danh-sach-dat-phong'
     },
     {
         name: 'Quản lý khách hàng',
@@ -38,6 +42,7 @@ const Links = [
 const NavbarAdmin = () => {
     return (
         <div>
+            
             <Sider
             theme="dark"
             width={200}
@@ -50,6 +55,9 @@ const NavbarAdmin = () => {
 
             }}
         >
+        <div className='flex justify-center'>
+            <img src="https://www.logolynx.com/images/logolynx/23/23938578fb8d88c02bc59906d12230f3.png" alt="" className='w-[100px] ' />
+        </div>
             <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
                 {Links.map((link, index) => (
                     <Menu.Item key={index + 1}>

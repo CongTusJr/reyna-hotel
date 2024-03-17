@@ -5,7 +5,7 @@ const Default = ({ children }) => {
   return (
     <div className='flex'>
       <NavbarAdmin />
-      <div className='ml-52'>
+      <div className='ml-52 w-full'>
 
         {children}
       </div>
