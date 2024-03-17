@@ -1,8 +1,10 @@
 import AboutUsPage from "../Pages/AboutUspage/AboutUsPage";
+import QLNV from "../Pages/Admin/QLNV/QLNV";
 import ContactPage from "../Pages/ContactPage/ContactPage";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import HomePage from "../Pages/HomePage/HomePage";
 import RoomPage from "../Pages/RoomPage/RoomPage";
+import NavbarAdmin from "../components/NavbarAdmin/NavbarAdmin";
 
 export const routes = [
   {
@@ -25,8 +27,20 @@ export const routes = [
     page: AboutUsPage,
     isShowHeader: true,
   },
+
   {
     path: "*",
     page: ErrorPage,
+  },
+];
+export const routes1 = [
+  {
+    path: "/admin",
+    page: NavbarAdmin,
+  },
+  {
+    path: "/admin/qlnv",
+    page: QLNV,
+    isShowHeader: true,
   },
 ];
