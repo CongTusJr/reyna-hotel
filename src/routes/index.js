@@ -1,4 +1,5 @@
 import AboutUsPage from "../Pages/AboutUspage/AboutUsPage";
+import QLKH from "../Pages/Admin/QLKH";
 import QLNV from "../Pages/Admin/QLNV/QLNV";
 import ContactPage from "../Pages/ContactPage/ContactPage";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
@@ -39,8 +40,13 @@ export const routes1 = [
     page: NavbarAdmin,
   },
   {
-    path: "/admin/qlnv",
+    path: "/admin/quan-ly-nhan-vien",
     page: QLNV,
+    isShowHeader: true,
+  },
+  {
+    path: "/admin/quan-ly-khach-hang",
+    page: QLKH,
     isShowHeader: true,
   },
 ];
